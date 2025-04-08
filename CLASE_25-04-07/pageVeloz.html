@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>binvenida</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        color: #666;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bienvenido a la página de bienvenida</h1>
+      <p>
+        Esta es una página de ejemplo para saludar a todos en la comisión 74280
+        - Programación Backend I: Desarrollo Avanzado de Backend Flex en
+        CoderHouse
+      </p>
+    </div>
+    <script>
+      $(document).ready(function () {
+        Swal.fire({
+          title: "¡Hola!",
+          text: "Bienvenido a nuestra página web.",
+          icon: "success",
+          confirmButtonText: "Aceptar",
+        });
+      });
+    </script>
+  </body>
+</html>
