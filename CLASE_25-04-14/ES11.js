@@ -8,4 +8,10 @@
 
 //* VAR PRIVADA - ENCAPSULAMIENTO
 
+class Gato {
+    #nombre
+    constructor(nombre){
+        this.#nombre= ""
+    }
+}
 

@@ -10,7 +10,7 @@ console.log(Math.pow(base, exponente));
 // Includes -> BOOL
 let lista = [2, 6, 2, 87, "pepe"];
 
-const result = lista.includes("Pepe");
+const result = lista.includes("pepe");
 console.log(result);
 
 

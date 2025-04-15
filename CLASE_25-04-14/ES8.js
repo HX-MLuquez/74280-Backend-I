@@ -24,23 +24,72 @@ console.log(nombre);
 let nombre2 = nana || "Nina"; // undefined null vacío o CERO (0) ""
 console.log(nombre2);
 
-let nombre3 = nana ?? "nulishshshshhh"
+let nombre3 = nana ?? "nulishshshshhh";
 console.log(nombre3);
+
+var resultB
+if(nana){
+  resultB = "holis"
+}else {
+  resultB ="chau"
+}
+let result = nana ? "holis" : "chau"
+console.log(result)
 //*------------------------------------------------------------------
 //*------------------------------------------------------------------
 //*------------------------------------------------------------------
 
 class Persona {
-  #nombre 
-  constructor(nombre){
-    this.#nombre = nombre
+  #nombre; //* PRIVADA # <- proteger - integridad
+  apellido = "lopez";
+  static gender = "female"
+  constructor(nombre) {
+    this.#nombre = nombre;
   }
   getName() {
     return this.#nombre;
   }
 }
 
-const personita = new Persona("Hulk")
-console.log(personita.getName())
+const personita = new Persona("Hulk");
+console.log(personita.getName());
+
+console.log(personita.apellido);
+// console.log(personita.#nombre);
 
 
+//* 
+console.log(Persona.gender);
+
+class Product {
+  static stock = 101 // GLOBALES -> se puede acceder sin instanciar
+  static IVA = 0.21
+  constructor(){
+    Product.stock--
+  }
+
+  //* METODOS 
+  static getProductById(id){
+    return "enjoy!!!"
+  }
+  static getAllProducts(){
+
+    // return -> [ todosLosProductos ]
+  }
+  static createProduct(product){
+    // product -> {id name stock color price}
+
+  }
+  static deleteProduct(id){
+
+
+  }
+}
+
+// const producto1 = new Product() // Instanciamos con la palabra reservada new
+console.log(Product.getProductById(2));
+
+
+module.exports = {
+  Product
+}

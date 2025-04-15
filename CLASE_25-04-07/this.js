@@ -8,6 +8,7 @@ const plantillaRegistro = {
     //* ESTE ES EL CONSTRUCTOR
     nombre: "",
     apellido: "",
+    apellido:"---",
     //* METODOS
     verNombreApellido: function(){
         console.log(this.nombre, " ", this.apellido)

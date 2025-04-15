@@ -7,6 +7,8 @@ class Persona {
     this.nombre = nombre;
     this.apellido = apellido;
     this.id = null;
+    // this.apellido = 0
+    //  KEY  -  VALUE
   }
   // Metodos
   getUserName() {
@@ -162,3 +164,41 @@ class Contador {
 
 //* OUTPUT -> value -> num -> 2
 //* OUTPUT -> lista -> array -> [{color:"rojo"}{color:"rojo"}]
+
+
+class Auto {
+  constructor(a,b,c="hola"){
+    this.nombre=a
+    //.....
+  }
+}
+
+const autito1 = new Auto("1", "2")
+
+class Perro {
+  constructor(){
+    this.nombre=null
+    //.....
+  }
+}
+
+const perrito1 = new Auto()
+
+//--------
+
+
+const obj1 = {
+  a: "",
+  b: ""
+}
+
+const obj2 = {
+  a: "",
+  b: "",
+  a: 88998
+}
+
+var a = ""
+
+var a = 0 
+

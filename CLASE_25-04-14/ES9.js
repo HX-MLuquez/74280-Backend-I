@@ -7,8 +7,10 @@
 const listita = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const [a,b, ...resto] = listita
+console.log(a)
+console.log(b)
 
-console.log(resto)/*  */
+console.log(resto)/* [3, 4, 5, 6, 7, 8, 9] */
 
 const [...resttito] = listita
 // ===
@@ -33,3 +35,11 @@ console.log(id);
 console.log(restoPersona);
 
 const clonarPersona = {...persona}
+
+
+
+const lista = [ 32, "ww", 12, 11]
+
+const copy1 = lista
+
+const copy2 = [...lista]
