@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "edad": 30,
+    "curso": "Programación Avanzada"
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "edad": 30,
+    "curso": "Programación Avanzada"
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "edad": 30,
+    "curso": "Programación Avanzada"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "hans-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "2-HANDS-1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "pablito": "nodemon HANDS_1.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
