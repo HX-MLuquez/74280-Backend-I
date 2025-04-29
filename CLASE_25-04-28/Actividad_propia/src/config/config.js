@@ -1,0 +1,2 @@
+//* config.js es un archivo de configuración que contiene la configuración de la base de datos y el puerto del servidor
+//* Se utiliza para establecer la conexión a la base de datos y el puerto del servidor
