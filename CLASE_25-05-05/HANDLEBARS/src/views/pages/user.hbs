@@ -1,0 +1,15 @@
+ {{> header}}
+ {{!-- <div class="header">
+    <h1>Welcome to Handlebars</h1>
+    <p>Handlebars is a simple templating language</p>
+</div> --}}
+<div class="userBody">
+    {{#if id}}
+    <h1>Hola, {{nombre}}!</h1>
+    <p>Síganme los buenos ... </p>
+    <img src="/public/img/chapulin.jpg" alt="chapulin colorado" />
+    {{else}}
+    <p>No ha enviado ID</p>
+    <p>{{bebe}}</p>
+    {{/if}}
+</div>

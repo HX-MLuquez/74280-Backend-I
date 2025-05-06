@@ -1,0 +1,1 @@
+// El manager busca la data en la DB (en nuestro archivos)

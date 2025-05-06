@@ -1,0 +1,1 @@
+// Usa el manager busca la data aplica la lógica de negocio
