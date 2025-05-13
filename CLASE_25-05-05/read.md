@@ -142,6 +142,16 @@ root/
 
 #### ➕ POST `/:cid/product/:pid`
 
+localhost:3000/api/products/32/product/2
+
+req.params.cid -> 32
+req.params.pid -> 2
+
+const {cid, pid} = req.params 
+if(!cid || !pdi){
+   
+}
+
 * Agrega un producto al carrito.
 * Si el producto ya existe en el carrito, se **incrementa** la propiedad `quantity`.
 * Estructura del objeto dentro del array `products` del carrito:
@@ -208,6 +218,11 @@ carts = [{id:32, products:[{
   "product": "2",
   "quantity": 11
 }]},{}]
+
+carts 32  product 2 
+
+carts[0].products.map -> product === 2 
+
 Descripción General
 
 Desarrollar un servidor que contenga los endpoints y servicios necesarios para gestionar los productos y carritos de compra para tu API.
