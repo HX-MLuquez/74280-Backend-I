@@ -1,4 +1,4 @@
-### Bases de Datos Relacionales (SQL)
+### Bases de Datos Relacionales (SQL) Lenguaje estructurado en consultas
 
 - **Modelo**: Relacional
 - **Estructura**: Tablas con filas y columnas.
@@ -122,3 +122,45 @@ CREATE (a)-[:FRIEND]->(b);
 
 Aunque las bases de datos NoSQL no gestionan las relaciones de la misma manera que las bases de datos SQL, pueden representar y manejar relaciones de maneras que se adaptan a sus modelos de datos específicos. Por lo tanto, es más preciso decir que las bases de datos NoSQL gestionan las relaciones de forma diferente, no que carezcan de ellas.
 
+
+
+```js
+users
+{
+    _id: ObjectId("111"),
+    name: "Bob",
+    email: "bob@example.com"
+}
+{
+    _id: ObjectId("224"),
+    name: "Pep",
+    email: "pep@example.com"
+}
+{
+    _id: ObjectId("321"),
+    name: "Vim",
+    email: "vim@example.com"
+}
+
+groups
+{
+    _id: ObjectId("2021"),
+    name: "Los leones",
+    users: [{userId:111},{userId:224}]
+}
+
+const result = groups.findOne(2021) => {name: "Los leones",users: [{userId:111},{userId:224}]}
+
+result.users.map((user)=>{
+    const myUser = users.finOne(user.userId)
+})
+
+Buscamos que desde el navegador me llegue
+
+Los leones
+
+- Bob
+- Pep
+
+
+```
