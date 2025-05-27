@@ -190,3 +190,12 @@ db.estudiantes.find({}, { email: 0});
 
 
 db.dropDatabase()
+
+
+---
+
+# DELETE a como se hace en el desarrollo actual
+## SOFT DELETE - BANEO
+```javascript
+db.estudiantes.updateOne({ _id: ObjectId('432423523534') }, { $set: { active: false} });
+```

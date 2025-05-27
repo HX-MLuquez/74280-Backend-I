@@ -79,14 +79,63 @@ Es parte de la **lógica de negocio** (capa intermedia) entre los controladores 
 
 ### ✅ Carpetas de un proyecto modelo
 
-| Carpeta         | Propósito típico                                                |
-| --------------- | --------------------------------------------------------------- |
-| `services/`     | Lógica de negocio (usa modelos/managers, puede contener reglas) |
-| `managers/`     | Lógica de acceso directo a datos (consultas puras con modelos)  |
-| `repositories/` | Similar a `managers`, más común en apps con patrón DDD          |
-| `data-access/`  | Más explícito, útil si hay múltiples fuentes de datos           |
+| Carpeta         | Propósito típico                                                 |
+| --------------- | ---------------------------------------------------------------- |
+| `services/`     | Lógica de negocio (usa modelos/managers, puede contener reglas)  |
+| `managers/`     | Lógica de acceso directo a datos (consultas puras con modelos)   |
+| `repositories/` | Similar a `managers`, más común en apps con patrón DDD           |
+| `data-access/`  | Más explícito, útil si hay múltiples fuentes de datos            |
+| `dao/`          | Data Access Object, patrón para separar lógica de acceso a datos |
+| `controllers/`  | Manejo de peticiones HTTP, llama a servicios/managers            |
+| `models/`       | Definición de modelos de datos (Sequelize, Mongoose, etc.)       |
+| `routes/`       | Definición de rutas y endpoints                                  |
+| `config/`       | Configuración de la aplicación (variables de entorno, etc.)      |
+| `db/`           | Configuración de la base de datos (conexión, inicialización)     |
+| `app.js`        | Configuración de Express y middlewares                           |
+| `server.js`     | Punto de entrada del servidor (app.listen)                       |
 
----
+En base a esto, la estructura de carpetas puede variar según las necesidades del proyecto y las preferencias del equipo de desarrollo.
+
+Una estructura comúnmente usada en proyectos Node.js con Express y Sequelize podría ser:
+
+```bash
+src/
+├── config/
+│   ├── config.js
+│   └── env.js
+├── controllers/
+│   └── userController.js
+├── services/
+│   └── userService.js
+├── models/
+│   └── user.js
+├── routes/
+│   └── userRoutes.js
+├── db/
+│   └── index.js
+└── app.js
+```
+Y una estructura comúnmente usada en proyectos Node.js con Express y Mongoose, y usando `data-access-object/`
+
+```bash
+src/
+├── data-access-object/ # Donde data-access-object es un patrón de diseño que separa la lógica de acceso a datos de la lógica de negocio. Y data-access-object reemplaza a managers/ o repositories/
+│   └── userDao.js
+├── config/
+│   ├── config.js
+│   └── env.js
+├── controllers/
+│   └── userController.js
+├── services/
+│   └── userService.js
+├── models/
+│   └── user.js
+├── routes/
+│   └── userRoutes.js
+├── db/
+│   └── index.js
+└── app.js
+```
 
 ### Ejemplo usando `managers/`
 
